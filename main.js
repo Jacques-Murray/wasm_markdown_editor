@@ -1,4 +1,4 @@
-import init, { parse_markdown } from './pkg/wasm_markdown_editor';
+import init, { parse_markdown } from './pkg/wasm_markdown_editor.js';
 
 async function run() {
   // Initialize the WebAssembly module.
@@ -8,7 +8,7 @@ async function run() {
   const htmlOutput = document.getElementById('html-output');
 
   // Set default text
-  const defaultMarkdown = '$ Hello, WebAssembly!\n\nType your **Markdown** here.';
+  const defaultMarkdown = '# Hello, WebAssembly!\n\nType your **Markdown** here.';
   markdownInput.value = defaultMarkdown;
   htmlOutput.innerHTML = parse_markdown(defaultMarkdown);
 
